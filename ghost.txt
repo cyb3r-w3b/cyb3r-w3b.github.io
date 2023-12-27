@@ -1,0 +1,1 @@
+\033[96m         **floating ghost**\033[00m
