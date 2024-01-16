@@ -1,0 +1,130 @@
+<html lang="en">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Code | Editor</title>
+  <code>
+			<header>
+				<p>Free Code</p><b onClick="ml()" style="font-size:30px; float:right; margin-top:-47px; margin-right:20px;">+</b><b onClick="lm()" id="ex" style="display:none; background:red; font-size:30px; float:right; margin-top:-47px; margin-right:20px;">×</b>
+				</header>
+				<div class="main">
+					<textarea id="html" placeholder="type code ..."></textarea>
+					<div style="background:red; height:1px; margin-top:10px;"></div>
+            <iframe id="result"></iframe>
+            <b onClick="run()" style="font-size:20px; font-weight:900; position:fixed; bottom:80px; right:10px; background:red; padding:20px; border-radius:50px;">RUN</b>
+            </div>
+				<footer>
+					<b>با ما در ارتباط باشید</b><br>
+					<a href="tel:+9893345++++3" style="color:blue;">Phone</a> <a href="mailto:hoomanmozmoziii@gmail.com?subject=hello" style="color:blue;">email</a><br>
+						<d>create By Hooman Sou</d>
+					</footer>
+					<div class="msg" id="msgs">
+						<a href="index.html">Home</a>
+						<div style="background:white; margin-top:5px; margin-bottom:5px; height:2px; margin-left:5px; margin-right:5px;"></div>
+						<a href="termi.html">Terminal</a>
+						<div style="background:white ; height:2px; margin-top:5px; margin-bottom:5px; margin-left:5px; margin-right:5px;"></div>
+						<a href="downloads.html">Download</a>
+						</div>
+					</code>
+			</body>
+			<style>
+				body{
+					background:black;
+					}
+				header{
+					background:red;
+					border-radius:0px 0px 10px 10px;
+					position:fixed;
+					left:0;
+					right:0;
+					padding-left:5px;
+					color:white;
+					font-weight:900;
+					font-size:18px;
+					top:0;
+					}
+					footer{
+						background:red;
+						color:white;
+						position: fixed;
+						left:0;
+					    right:0;
+						bottom:0;
+						font-weight:900;
+						text-align:center;
+						padding-bottom:5px;
+						padding-top:2px;
+						}
+						.main{
+							text-align:center;
+							margin-top:68px;
+							color:white;
+							font-size:15px;
+							font-weight:500;
+							padding:5px;
+							padding-bottom:20px;
+							border:2px solid red;
+							border-radius:20px;
+							}
+							.msg{
+								background:red;
+								border:1px solid white;
+								border-radius:10px 10px 10px 10px;
+								position:fixed;
+								top:60px;
+								right:10;
+								padding:8px;
+								color:black;
+								width:150px;
+								font-weight:900;
+								display:none;
+								font-size:15px;
+								}
+								iframe{
+									border:none;
+									background:white;
+									color:black;
+									height:450px;
+									margin-top:10px;
+									display:none;
+									width: 360px;
+									}
+									textarea{
+										background:none;
+										color:white;
+										border:none;
+										outline:none;
+										width:350px;
+										height:100px;
+										}
+								a{
+									color:black;
+									padding:15x;
+									text-decoration:none;
+									}
+									a:hover{
+										color:white;
+										}
+									
+				</style>
+  <script>
+    const html = document.getElementById("html");
+    const result = document.getElementById("result");
+    html.addEventListener("keyup", () => {
+      result.contentWindow.document.open();
+      result.contentWindow.document.write(html.value);
+      result.contentWindow.document.close();
+    });
+    function ml(){
+					document.getElementById("msgs").style.display = "block";
+					document.getElementById("ex").style.display = "block";
+					}
+					function lm(){
+						document.getElementById("msgs").style.display = "none";
+					document.getElementById("ex").style.display = "none";
+						}
+						function run(){
+							document.getElementById("result").style.display = "block";
+							}
+  </script>
+</html>
